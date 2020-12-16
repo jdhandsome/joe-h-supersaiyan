@@ -46,7 +46,8 @@ for c in currency_rt: # remove extra "" contained in the string, add key value f
     i = i[1:-1]
     rates[i] = c[1]
 
-rt = float(rates[conversion_to_name]) #convert value into a float and round to the 2nd place
-rt = round(rt, 2)
+rt = float(rates[conversion_to_name]) #convert value into a float
 rate_calc = conversion_amount * rt #calculate the exchange rate
+rate_calc = round(rate_calc, 2) #round to the second position
+
 print(conversion_amount, conversion_currency_name, " equals ", rate_calc, conversion_to_name, '\n')
